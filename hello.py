@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd 
 import altair as alt
-import folium
 
 # Load the dataset
 data = pd.read_csv("NYC_Collisions.csv")
