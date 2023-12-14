@@ -2,6 +2,6 @@ streamlit
 pandas
 altair
 wordcloud
-matplotlib.pyplot
+matplotlib
 folium
-plotly.express
+plotly
