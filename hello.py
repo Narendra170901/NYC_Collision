@@ -1,9 +1,10 @@
 import streamlit as st
 import pandas as pd 
 import altair as alt
-from wordcloud import WordCloud
-import matplotlib.pyplot as plt  # Import the necessary library
+import matplotlib.pyplot as plt
 
+st.run("pip install folium")
+st.run("from wordcloud import WordCloud")
 # Load the dataset
 data = pd.read_csv("NYC_Collisions.csv")
 st.dataframe(data)
@@ -47,10 +48,11 @@ if len(selected_date_range) == 2:
     # Display selected information
     st.write(f'Selected Date Range: {selected_date_range[0].date()} to {selected_date_range[1].date()}')
 
-    tab1, tab2, tab3, tab4 = st.tabs(["Accidents By date and Borough", "Type of Collisions occurred more", "Suicide Statistics Analysis by Gender", "Suicides Statistics Analysis by Year and Age_group"])
-    
+
+
+    tab1, tab2, tab3,tab4 = st.tabs(["Accidents By date and Borough", "Type of Suicide By State", "Suicide Statistics Analysis by Gender","Suicides Statistics Analysis by Year and Age_group"])
     with tab1:
-        # Map
+    # Map
         st.title('Collision Map')
 
         # Create a copy with required column names
@@ -80,6 +82,9 @@ if len(selected_date_range) == 2:
 
         # Display the filtered data
         st.write(filtered_data)
+
+
+
 
 else:
     st.warning("Please select a valid date range.")
