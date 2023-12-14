@@ -1,6 +1,7 @@
 streamlit
-wordcloud==1.8.1
+pandas
 altair
-matplotlib==3.4.3
-folium==0.12.1
-
+wordcloud
+matplotlib.pyplot
+folium
+plotly.express
