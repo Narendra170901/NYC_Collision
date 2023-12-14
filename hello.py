@@ -1,9 +1,7 @@
 import streamlit as st
 import pandas as pd 
 import altair as alt
-from wordcloud import WordCloud
-import matplotlib.pyplot as plt
-import folium
+
 
 # Load the dataset
 data = pd.read_csv("NYC_Collisions.csv")
