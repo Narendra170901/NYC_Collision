@@ -70,13 +70,13 @@ if len(selected_date_range) == 2:
         # Convert 'Contributing Factor' column to strings and join them
         text = ' '.join(filtered_data['Contributing Factor'].astype(str))
 
-        wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
+        word = WordCloud(width=800, height=400, background_color='white').generate(text)
 
         # Plot the word cloud
         st.markdown(f"###### Contributing Factors for {''.join(selected_borough)}")
 
         plt.figure(figsize=(10, 5))
-        plt.imshow(wordcloud, interpolation='bilinear')
+        plt.imshow(word, interpolation='bilinear')
         plt.axis('off')
         st.pyplot(plt)
 
