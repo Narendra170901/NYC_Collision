@@ -1,10 +1,11 @@
 import streamlit as st
 import pandas as pd 
 import altair as alt
-import matplotlib.pyplot as plt
+
 
 st.run("pip install folium")
 st.run("from wordcloud import WordCloud")
+st.run("import matplotlib.pyplot as plt")
 # Load the dataset
 data = pd.read_csv("NYC_Collisions.csv")
 st.dataframe(data)
