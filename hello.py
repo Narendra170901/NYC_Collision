@@ -60,7 +60,7 @@ if len(selected_date_range) == 2:
 
         # Display the map
         st.map(map_data)
-     with tab2:
+    with tab2:
         st.header("Type of Collisions occurred more")
 
         # Convert 'Contributing Factor' column to strings and join them
