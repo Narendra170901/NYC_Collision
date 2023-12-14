@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd 
 import altair as alt
-import plotly.express as px
 
 # Load the dataset
 data = pd.read_csv("NYC_Collisions.csv")
