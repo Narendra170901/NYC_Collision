@@ -1,7 +1,10 @@
+!pip install wordcloud
+
+from wordcloud import WordCloud
+
 import streamlit as st
 import pandas as pd 
 import altair as alt
-from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import folium
 
@@ -48,11 +51,11 @@ if len(selected_date_range) == 2:
     # Display selected information
     st.write(f'Selected Date Range: {selected_date_range[0].date()} to {selected_date_range[1].date()}')
 
+    # Create tabs
+    tab1, tab2, tab3, tab4 = st.tabs(["Accidents By date and Borough", "Type of Collisions", "Suicide Statistics", "Age and Gender Statistics"])
 
-
-    tab1, tab2, tab3,tab4 = st.tabs(["Accidents By date and Borough", "Type of Suicide By State", "Suicide Statistics Analysis by Gender","Suicides Statistics Analysis by Year and Age_group"])
     with tab1:
-    # Map
+        # Map
         st.title('Collision Map')
 
         # Create a copy with required column names
@@ -73,7 +76,7 @@ if len(selected_date_range) == 2:
         wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
 
         # Plot the word cloud
-        st.markdown(f"###### Contributing Factors for {''.join(selected_borough)}")
+        st.markdown(f"###### Contributing Factors for {selected_borough}")
 
         plt.figure(figsize=(10, 5))
         plt.imshow(wordcloud, interpolation='bilinear')
