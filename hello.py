@@ -1,10 +1,7 @@
-!pip install wordcloud
-
-from wordcloud import WordCloud
-
 import streamlit as st
 import pandas as pd 
 import altair as alt
+from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import folium
 
