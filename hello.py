@@ -1,13 +1,13 @@
 import streamlit as st
 import pandas as pd 
 import altair as alt
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+import folium
 
 # Load the dataset
 data = pd.read_csv("NYC_Collisions.csv")
 st.dataframe(data)
-
-st.markdown("#New York City Collisions")
-columns=data.columns
 
 # Sidebar for user input
 st.sidebar.title('Vehicle Collision Analysis in NYC')
