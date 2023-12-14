@@ -7,8 +7,12 @@ import folium
 import plotly.express as px
 
 # Load the dataset
-data = pd.read_csv("NYC_Collisions.csv")
-st.dataframe(data)
+@st.cache_data()    
+def load_data():
+    df = pd.read_csv('NYC_Collisions.csv')
+    return(df)
+
+data = load_data()
 
 # Sidebar for user input
 st.sidebar.title('Vehicle Collision Analysis in NYC')
