@@ -1,6 +1,10 @@
 import streamlit as st
 import pandas as pd 
 import altair as alt
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+import folium
+import plotly.express as px
 
 # Load the dataset
 data = pd.read_csv("NYC_Collisions.csv")
