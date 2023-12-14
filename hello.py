@@ -2,10 +2,12 @@ import streamlit as st
 import pandas as pd 
 import altair as alt
 
-
 # Load the dataset
 data = pd.read_csv("NYC_Collisions.csv")
 st.dataframe(data)
+
+st.markdown("#New York City Collisions")
+columns=data.columns
 
 # Sidebar for user input
 st.sidebar.title('Vehicle Collision Analysis in NYC')
@@ -62,6 +64,24 @@ if len(selected_date_range) == 2:
         # Display the map
         st.map(map_data)
 
+    with tab2:
+        st.header("Type of Collisions occurred more")
+
+        # Convert 'Contributing Factor' column to strings and join them
+        text = ' '.join(filtered_data['Contributing Factor'].astype(str))
+
+        wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
+
+        # Plot the word cloud
+        st.markdown(f"###### Contributing Factors for {''.join(selected_borough)}")
+
+        plt.figure(figsize=(10, 5))
+        plt.imshow(wordcloud, interpolation='bilinear')
+        plt.axis('off')
+        st.pyplot(plt)
+
+        # Display the filtered data
+        st.write(filtered_data)
 
 
 
