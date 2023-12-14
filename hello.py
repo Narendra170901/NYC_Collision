@@ -6,6 +6,9 @@ import altair as alt
 data = pd.read_csv("NYC_Collisions.csv")
 st.dataframe(data)
 
+st.markdown("#New York City Collisions")
+columns=data.columns
+
 # Sidebar for user input
 st.sidebar.title('Vehicle Collision Analysis in NYC')
 
