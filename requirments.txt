@@ -1,4 +1,6 @@
 streamlit
-wordcloud
+wordcloud==1.8.1
 altair
-matplotlib.pyplot
+matplotlib==3.4.3
+folium==0.12.1
+
