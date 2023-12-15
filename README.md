@@ -36,11 +36,12 @@ https://mavenanalytics.io/data-playground?page=4&pageSize=10
 
 # Data Pre-Processing and Cleaning
 The raw data has a lot of unwanted and wrongly formatted data. So the main task after getting the dataset was to clean it and convert it into the format I need.
-## Steps Performed in Data Pre-Processing and Cleaning:
+**Steps Performed in Data Pre-Processing and Cleaning:**
 
-1.converted the date entries to the datetime format and transformed the time entries to the timestamp format.
-2.Additionally, we performed data cleaning by removing rows with missing values in the contributing factor column. 
-3.Dropped the rows with null values in the 'Latitude' or 'Longitude' columns to ensure the data used for mapping is complete.These preprocessing steps enhance the dataset for better analysis and visualization in the Streamlit app.
+ 1.converted the date entries to the datetime format and transformed the time entries to the timestamp format.
+ 2.Additionally, we performed data cleaning by removing rows with missing values in the contributing factor column. 
+ 3.Dropped the rows with null values in the 'Latitude' or 'Longitude' columns to ensure the data used for mapping is complete.These preprocessing steps enhance the dataset 
+ for better analysis and visualization in the Streamlit app.
 
 # Future Work
 In Future Iterations, I would like to add K-Means clustering to the analysis and mark the cluster on the map and I am looking forwad to make it real time as the  data gets updated the visualization gets updated.
