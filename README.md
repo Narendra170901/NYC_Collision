@@ -40,7 +40,9 @@ The raw data has a lot of unwanted and wrongly formatted data. So the main task 
 **Steps Performed in Data Pre-Processing and Cleaning:**
 
  1.converted the date entries to the datetime format and transformed the time entries to the timestamp format.
+ 
  2.Additionally, we performed data cleaning by removing rows with missing values in the contributing factor column. 
+ 
  3.Dropped the rows with null values in the 'Latitude' or 'Longitude' columns to ensure the data used for mapping is complete.These preprocessing steps enhance the dataset 
  for better analysis and visualization in the Streamlit app.
 
