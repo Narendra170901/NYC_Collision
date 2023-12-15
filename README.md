@@ -36,6 +36,7 @@ https://mavenanalytics.io/data-playground?page=4&pageSize=10
 
 # Data Pre-Processing and Cleaning
 The raw data has a lot of unwanted and wrongly formatted data. So the main task after getting the dataset was to clean it and convert it into the format I need.
+
 **Steps Performed in Data Pre-Processing and Cleaning:**
 
  1.converted the date entries to the datetime format and transformed the time entries to the timestamp format.
